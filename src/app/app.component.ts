@@ -7,17 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  pesos = 'PESO = 70 kg';
-  alturas = 'ALTURA = 1.70 m';
-  peso = 70;
-  altura = 1.70;
-  cal = this.peso / (this.altura * this.altura);
-
-
-
-  
+  pesos = 'PESO = ';
+  alturas = 'ALTURA = ';
+  peso : number;
+  altura : number; 
+    
 exibir(): void{
-  alert('IMC = ' + this.cal.toFixed(2));
+  let cal = this.peso / (this.altura * this.altura);
+  alert('IMC = ' + cal.toFixed(2));
 }
 }
 
